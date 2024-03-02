@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   root 'candy#index'
+  resources :candy
 end
