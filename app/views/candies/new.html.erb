@@ -1,4 +1,4 @@
-<%= form_with candy:@candy, data: {turbo: false} do |form| %>
+<%= form_with model: @candy, data: {turbo: false} do |form| %>
   <p>
     <%= form.label :name, 'name' %>
     <%= form.text_field :name %>
