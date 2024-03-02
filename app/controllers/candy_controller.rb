@@ -1,6 +1,6 @@
 # Candy controller
 class CandyController < ApplicationController
   def index
-    @username = 'Giovanny Cordeiro'
+    @candys = Candy.all
   end
 end

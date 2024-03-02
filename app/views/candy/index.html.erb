@@ -1,3 +1,17 @@
 <h2>
   Root candy
 </h2>
+
+<% @candys.each do |candy| %>
+  <div>
+    <span>
+      <%= candy.name %> |
+    </span>
+    <span>
+      <%= candy.description %> |
+    </span>
+    <span>
+      <%= candy.rate %>
+    </span>
+  </div>
+<% end %>
