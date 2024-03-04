@@ -2,6 +2,10 @@
   Root candy
 </h2>
 
+<nav>
+  <%= link_to 'adicione um novo doce', new_candy_path %>
+</nav>
+
 <% @candys.each do |candy| %>
   <div>
     <span>
