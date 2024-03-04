@@ -1,0 +1,17 @@
+<%= form_with model: candy, data: {turbo: false} do |form| %>
+  <p>
+    <%= form.label :name, 'name' %>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :description, 'description' %>
+    <%= form.text_field :description %>
+  </p>
+  <p>
+    <%= form.label :rate, 'rate' %>
+    <%= form.number_field :rate %>
+  </p>
+  <p>
+    <%= form.submit 'Create' %>
+  </p>
+<% end %>
