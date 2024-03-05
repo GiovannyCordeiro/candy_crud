@@ -1,6 +1,6 @@
 # Candy controller
 class CandiesController < ApplicationController
-  before_action :fetch_candy, only: %i[show edit update]
+  before_action :fetch_candy, only: %i[show edit update destroy]
 
   def index
     @candys = Candy.all
@@ -24,6 +24,11 @@ class CandiesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @candy.destroy
+    redirect_to root_path
   end
 
   private

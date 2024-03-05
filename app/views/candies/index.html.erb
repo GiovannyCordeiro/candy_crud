@@ -15,8 +15,14 @@
       <%= candy.description %> |
     </span>
     <span>
-      <%= candy.rate %>
+      <%= candy.rate %> |
     </span>
-    <%= link_to  "Edite o doce", edit_candy_path(candy) %>
+    <%= link_to  "Edite o doce", edit_candy_path(candy) %> |
+    <%= link_to  "Apagar doce", 
+      candy_path(candy),
+      data: {
+        'turbo-method': :delete, 
+        'turbo-confirm': 'Tem certeza que deseja deletar o doce?'
+      } %>
   </div>
 <% end %>
