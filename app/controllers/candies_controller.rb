@@ -1,6 +1,6 @@
 # Candy controller
 class CandiesController < ApplicationController
-  before_action :fetch_candy, only: %i[edit update]
+  before_action :fetch_candy, only: %i[show edit update]
 
   def index
     @candys = Candy.all
@@ -13,6 +13,8 @@ class CandiesController < ApplicationController
   def create
     @candy = Candy.new(allow_candy_params)
   end
+
+  def show() end
 
   def edit() end
 
