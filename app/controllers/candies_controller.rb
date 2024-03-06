@@ -12,6 +12,11 @@ class CandiesController < ApplicationController
 
   def create
     @candy = Candy.new(allow_candy_params)
+    if @candy.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def show() end
